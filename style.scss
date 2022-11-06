@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #003049;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(1fr, 1);
+	width: 40vw;
+	height: 90vh;
+
+	.calc-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: #fff;
+        width: 100%;
+        margin-bottom: 10px;
+        overflow: hidden;
+
+		div {
+            display: block;
+            width: 90%;
+            height: 30%;
+            padding: 5px;
+			border: none;
+			outline: none;
+			pointer-events: none;
+			appearance: textfield;
+            text-align: end;
+            font-size: 5vw;
+		}
+
+        .current-number {
+            font-weight: 700;
+        }
+
+        .previous-number {
+            font-size: 30px;
+            color: rgb(151, 148, 148);
+        }
+	}
+
+	.calc-body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 5px;
+
+        button {
+            border: none;
+            font-size: 30px;
+        }
+
+		.back-tool,
+		.plus-sign,
+		.minus-sign,
+		.multiply-sign {
+			grid-column: 4;
+		}
+
+		.reset-tool {
+			grid-column: 1/3;
+			grid-row: 5;
+            font-size: 40px;
+            background-color: #0a9396;
+            color: #fff;
+		}
+
+		.back-tool {
+			grid-row: 1;
+            background-color: #0a9396;
+            color: #fff;
+		}
+
+		.plus-sign {
+			grid-row: 2;
+		}
+
+		.minus-sign {
+			grid-row: 3;
+		}
+
+		.multiply-sign {
+			grid-row: 4;
+		}
+
+		.division-sign {
+			grid-column: 1;
+			grid-row: 4;
+		}
+
+		.equal-sign {
+			grid-column: 3/5;
+			grid-row: 5;
+            background-color: #e93c3c;
+            color: #fff;
+		}
+	}
+}

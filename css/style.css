@@ -1,0 +1,115 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #003049;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(1fr, 1);
+  width: 40vw;
+  height: 90vh;
+}
+.wrapper .calc-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.wrapper .calc-header div {
+  display: block;
+  width: 90%;
+  height: 30%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  pointer-events: none;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+  text-align: end;
+  font-size: 5vw;
+}
+.wrapper .calc-header .current-number {
+  font-weight: 700;
+}
+.wrapper .calc-header .previous-number {
+  font-size: 30px;
+  color: rgb(151, 148, 148);
+}
+.wrapper .calc-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.wrapper .calc-body button {
+  border: none;
+  font-size: 30px;
+}
+.wrapper .calc-body .back-tool,
+.wrapper .calc-body .plus-sign,
+.wrapper .calc-body .minus-sign,
+.wrapper .calc-body .multiply-sign {
+  grid-column: 4;
+}
+.wrapper .calc-body .reset-tool {
+  grid-column: 1/3;
+  grid-row: 5;
+  font-size: 40px;
+  background-color: #0a9396;
+  color: #fff;
+}
+.wrapper .calc-body .back-tool {
+  grid-row: 1;
+  background-color: #0a9396;
+  color: #fff;
+}
+.wrapper .calc-body .plus-sign {
+  grid-row: 2;
+}
+.wrapper .calc-body .minus-sign {
+  grid-row: 3;
+}
+.wrapper .calc-body .multiply-sign {
+  grid-row: 4;
+}
+.wrapper .calc-body .division-sign {
+  grid-column: 1;
+  grid-row: 4;
+}
+.wrapper .calc-body .equal-sign {
+  grid-column: 3/5;
+  grid-row: 5;
+  background-color: #e93c3c;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
